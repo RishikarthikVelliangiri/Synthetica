@@ -2,16 +2,18 @@
 
 Synthetica is a modern web application that generates synthetic data using AI. It provides a user-friendly interface for creating realistic test data in various formats like JSON, CSV, SQL, XML, and YAML.
 
+![Synthetica App](https://i.imgur.com/your-screenshot-link.png)
 
 ## Features
 
-- 🤖 AI-powered data generation using advanced language models
+- 🤖 AI-powered data generation using Google's Gemini 2.0 Pro API
 - 📊 Support for multiple data formats (JSON, CSV, SQL, XML, YAML)
-- 🎨 Beautiful, modern interface with animations
-- 🚀 Fast data generation with batched processing
-- 📱 Responsive design for all devices
+- 🎨 Beautiful, modern interface with animated UI elements
+- 🚀 Fast data generation with batched processing for large datasets
+- 📱 Fully responsive design for all devices
 - 🔄 Download and copy functionality for generated data
-- ✨ Syntax highlighting for better readability
+- ✨ Syntax highlighting for better code readability
+- 🧩 Intelligent formatting for each data type
 
 ## Getting Started
 
@@ -24,8 +26,8 @@ Synthetica is a modern web application that generates synthetic data using AI. I
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/synthetica.git
-   cd synthetica
+   git clone https://github.com/RishikarthikVelliangiri/Synthetica.git
+   cd Synthetica
    ```
 
 2. Install dependencies:
@@ -35,10 +37,10 @@ Synthetica is a modern web application that generates synthetic data using AI. I
    yarn install
    ```
 
-3. Create a `.env.local` file in the root directory with your API keys:
+3. Create a `.env.local` file in the root directory with your Google Gemini API key:
    ```
-   HF_API_KEY=your_hugging_face_api_key
-   HF_API_URL=https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1
+   GOOGLE_API_KEY=your_google_gemini_api_key
+   GOOGLE_API_URL=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-pro-exp:generateContent
    ```
 
 4. Start the development server:
@@ -64,8 +66,24 @@ Synthetica is a modern web application that generates synthetic data using AI. I
 - **TypeScript** - Type safety
 - **Tailwind CSS** - Styling
 - **Framer Motion** - Animations
-- **Hugging Face API** - AI model integration
-- **Shadcn UI** - UI components
+- **Google Gemini API** - Advanced AI model integration
+- **Shadcn UI** - Modern UI components
+
+## Key Features in Detail
+
+### Google Gemini 2.0 Pro Integration
+Synthetica leverages Google's advanced Gemini 2.0 Pro experimental model to generate highly realistic synthetic data. The implementation uses the v1beta API endpoint for access to this cutting-edge AI technology.
+
+### Smart Data Processing
+The application includes intelligent processing for each data format:
+- **JSON**: Proper formatting with consistent camelCase property names
+- **CSV**: Header normalization and systematic ID generation
+- **SQL**: Automatic schema creation with appropriate data types
+- **XML**: Well-formed structure with proper nesting
+- **YAML**: Clean, consistent formatting with proper indentation
+
+### Batched Processing
+For large data requests, Synthetica utilizes a batched processing approach to handle high volumes of data generation efficiently, enabling the creation of datasets with hundreds or thousands of entries.
 
 ## Deployment
 
@@ -89,8 +107,8 @@ For the application to work correctly, you need to set up these environment vari
 
 | Variable | Description |
 |----------|-------------|
-| HF_API_KEY | Your Hugging Face API key |
-| HF_API_URL | URL of the AI model (default is Mixtral-8x7B) |
+| GOOGLE_API_KEY | Your Google Gemini API key |
+| GOOGLE_API_URL | URL of the Gemini API endpoint |
 
 ## Contributing
 
@@ -102,6 +120,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgements
 
-- Powered by [Hugging Face](https://huggingface.co/) AI models
+- Powered by [Google Gemini](https://ai.google.dev/) AI models
 - UI components from [Shadcn UI](https://ui.shadcn.com/)
 - Animations by [Framer Motion](https://www.framer.com/motion/)
